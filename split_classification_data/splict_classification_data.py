@@ -104,7 +104,7 @@ for name in setting_file_name.keys():
         data_dict = {}
         npy_data_array = np.vstack(npy_data_array)
         data_dict['data'] = npy_data_array
-        data_dict["class_name"] = npy_meta
+        data_dict["label_name"] = npy_meta
         if not os.path.exists(os.path.join(main_data_path,"npy_dataset")):
             os.makedirs(os.path.join(main_data_path,"npy_dataset"))
         npy_path = os.path.join(main_data_path,"npy_dataset", name+"_{}".format(npy_data_array.shape[0]))
